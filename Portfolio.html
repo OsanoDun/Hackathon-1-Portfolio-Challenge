@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duncan Osano - Personal Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      @font-face {
+        font-family: 'LucideIcons';
+        /* Updated CDN link for lucide font */
+        src: url('https://cdn.jsdelivr.net/npm/lucide-static@latest/font/Lucide.ttf') format('truetype');
+      }
+      .lucide {
+        font-family: 'LucideIcons';
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      /* Basic smooth scroll */
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+          font-family: 'Inter', sans-serif;
+      }
+      /* Simple animation for sections */
+      .section-fade-in {
+          opacity: 0;
+          animation: fadeIn 0.8s ease-out forwards;
+      }
+      @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+      /* Add delay for staggered effect */
+      section:nth-of-type(1) { animation-delay: 0.1s; }
+      section:nth-of-type(2) { animation-delay: 0.2s; }
+      section:nth-of-type(3) { animation-delay: 0.3s; }
+      section:nth-of-type(4) { animation-delay: 0.4s; }
+      section:nth-of-type(5) { animation-delay: 0.5s; }
+      section:nth-of-type(6) { animation-delay: 0.6s; }
+
+      /* Style for the confirmation message */
+      #confirmation-message {
+        display: none; /* Hidden by default */
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+      }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 antialiased">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-800">
+                <a href="#">Duncan Osano</a>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 transition duration-300">About</a>
+                <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition duration-300">Skills</a>
+                <a href="#education" class="text-gray-600 hover:text-indigo-600 transition duration-300">Education</a>
+                <a href="#interests" class="text-gray-600 hover:text-indigo-600 transition duration-300">Interests</a>
+                <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition duration-300">Projects</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition duration-300">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button class="text-gray-600 focus:outline-none">
+                    <i class="lucide" style="font-size: 24px;">&#xe9a5;</i> </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <section id="about" class="mb-16 section-fade-in">
+            <h2 class="text-3xl font-bold mb-6 text-center text-indigo-600">About Me</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg text-center max-w-3xl mx-auto">
+                <p class="text-lg leading-relaxed text-gray-700">
+                    Hello! I'm Duncan Osano, a passionate Software Developer based in Kenya. I thrive on solving problems and building innovative solutions. What drives me is the desire to leverage technology to positively impact the society. I'm always eager to learn new technologies and collaborate on exciting projects.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills" class="mb-16 section-fade-in">
+            <h2 class="text-3xl font-bold mb-8 text-center text-indigo-600">Skills</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+                <h3 class="text-xl font-semibold mb-4 text-gray-700">Programming Languages:</h3>
+                <div class="flex flex-wrap justify-center gap-4 mb-6">
+                    <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">Python</span>
+                    <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">JavaScript</span>
+                    <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">HTML</span>
+                    <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">CSS</span>
+                    <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">SQL</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="mb-16 section-fade-in">
+            <h2 class="text-3xl font-bold mb-8 text-center text-indigo-600">Educational Background</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg max-w-3xl mx-auto">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold text-gray-800">BSc. Software Engineering</h3>
+                    <p class="text-md text-gray-600">University of Eastern Africa, Baraton [Nandi, Kenya]</p>
+                    <p class="text-sm text-gray-500">2018 - 2024</p>
+                    <p class="mt-2 text-gray-700"><b>Relevant coursework:</b> <br/>Object Oriented Programming <br/> Web development <br/> Software Project Management <br/> Database Management </p>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="C:\Users\USER\Documents\CRes\Osano Dun Resume_25.pdf" id="cv-download-link" download="DuncanOsano_CV.pdf" class="inline-flex items-center bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1">
+                        <i class="lucide mr-2" style="font-size: 18px;">&#xe954;</i> Download CV </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="interests" class="mb-16 section-fade-in">
+            <h2 class="text-3xl font-bold mb-8 text-center text-indigo-600">Interests</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg max-w-3xl mx-auto">
+                <p class="text-lg leading-relaxed text-gray-700 mb-4">
+                    What excites me most about technology is its potential to create scalable and impactful solutions, particularly in areas like web development and cloud computing.
+                </p>
+                <p class="text-lg leading-relaxed text-gray-700">
+                    I'm particularly interested in <b> development, data analytics and AI.</b> Especially their impact in the Fast moving consumer goods (FCMG), E-commerce and financial sectors. 
+                </p>
+                 </div>
+        </section>
+
+        <section id="projects" class="mb-16 section-fade-in">
+            <h2 class="text-3xl font-bold mb-8 text-center text-indigo-600">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">E-commerce website</h3>
+                        <p class="text-gray-700 mb-4 text-sm leading-relaxed">
+                            The project focused on creating a website for a local merchant to cater for online customers. Used <b>mysql and php</b> to create the backend systems for handling customer data and information.
+                        </p>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium transition duration-300">
+                            View Project
+                            <i class="lucide ml-1" style="font-size: 16px;">&#xe99c;</i> </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="section-fade-in">
+            <h2 class="text-3xl font-bold mb-8 text-center text-indigo-600">Get In Touch</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
+                <p class="text-center text-gray-600 mb-6">
+                    Interested in collaborating or have a question? Feel free to reach out!
+                </p>
+                <form id="contact-form" name="contact" method="POST" data-netlify="true" action="#">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-300 focus:border-indigo-500 outline-none transition duration-200" placeholder="Your Name">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-300 focus:border-indigo-500 outline-none transition duration-200" placeholder="your.email@example.com">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-300 focus:border-indigo-500 outline-none transition duration-200 resize-none" placeholder="Your message..."></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 mt-16 py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="current-year"></span> Duncan Osano. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                 <a href="https://github.com/DuncanOsano" target="https://github.com/OsanoDun" rel="noopener noreferrer" class="hover:text-white transition duration-300">GitHub</a>
+                 <a href="https://linkedin.com/in/duncan-osano" target="https://www.linkedin.com/in/osano-duncan/" rel="noopener noreferrer" class="hover:text-white transition duration-300">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+     <div id="confirmation-message" class="bg-green-500 text-white text-sm font-bold px-4 py-3 rounded-lg shadow-md" role="alert">
+        <p>Message sent successfully! (Simulation)</p>
+    </div>
+
+
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Basic Contact Form Submission Simulation
+        // NOTE: When using Netlify forms, Netlify handles the submission process.
+        // This JavaScript simulation might interfere or be redundant if Netlify's handling is active.
+        // Consider removing or commenting out this simulation part when deploying to Netlify,
+        // unless you need specific JS actions before/after Netlify's submission.
+        const contactForm = document.getElementById('contact-form');
+        const confirmationMessage = document.getElementById('confirmation-message');
+
+        // Keep the event listener ONLY IF you need custom JS actions *before* Netlify submits.
+        // If you just want Netlify to handle it, you can remove this whole listener.
+        contactForm.addEventListener('submit', function(event) {
+             // If you let Netlify handle it, you might not need preventDefault()
+             // event.preventDefault(); // Prevent default ONLY if you are stopping Netlify's submit to do something else first.
+
+            console.log('Form submitted (check Netlify dashboard for actual submission)');
+
+            // You might still want to show a custom confirmation, but Netlify can show its own.
+            // confirmationMessage.style.display = 'block';
+            // setTimeout(() => {
+            //     confirmationMessage.style.display = 'none';
+            // }, 4000);
+
+            // Netlify typically handles clearing the form upon successful submission.
+            // contactForm.reset();
+        });
+
+        // Mobile menu toggle script (Placeholder - requires IDs on button and menu)
+        // const mobileMenuButton = document.querySelector('.md\\:hidden button'); // Needs ID
+        // const mobileMenu = document.querySelector('.hidden.md\\:flex'); // Needs ID
+        // mobileMenuButton.addEventListener('click', () => {
+        //      mobileMenu.classList.toggle('hidden');
+        // });
+
+    </script>
+</body>
+</html>
